@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+.show-button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    height: 55px;
+    padding: 0 30px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 55px;
+    cursor: pointer;
+    color: white;
+    background: #29b96a;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.show-button:hover{
+    background: #239757;
+}
+.background{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3 ease;
+}
+#check:checked ~ .background{
+    opacity: 1;
+    pointer-events: auto;
+}
+.alert-box {
+    position: absolute;
+    max-width: 450px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    background: rgb(255, 255, 255);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.97);
+    transition: all 0.3s ease;
+}
+#check:checked ~ .alert-box{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50% , -50%) scale(1);
+}
+#check{
+    display: none;
+}
+.alert-box .icon{
+    height: 100px;
+    width: 100px;
+    color: #d33a2a;
+    border: 3px solid #d33a2a;
+    border-radius: 50%;
+    line-height: 97px;
+    font-size: 50px;
+}
+.alert-box header{
+    font-size: 35px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.alert-box p{
+    font-size: 20px;
+}
+.alert-box .btns{
+    margin-top: 20px;
+}
+.alert-box label{
+    display: inline-flex;
+    background: grey;
+    height: 55px;
+    padding: 0 30px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 55px;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: all 0.3 ease;
+}
+.btns label:first-child{
+    background: #29b96a;
+}
+.btns label:first-child:hover{
+    background: #239757;
+}
+.btns label:last-child{
+    background: #d33a2a;
+}
+.btns label:last-child:hover{
+    background: #a32e21;
+}
